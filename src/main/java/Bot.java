@@ -1,11 +1,11 @@
-/**
- * Created by Agent on 2019-02-12.
- */
+import rita.RiWordNet;
+
 public class Bot {
     String name;
     String[][] keyAns;
     int bestMatch;
     SpellCheck spell;
+    RiWordNet wordnet = new RiWordNet("C:\\Program Files (x86)\\WordNet\\2.1\\");
 
     Bot(String name) {
         this.name = name;
@@ -42,10 +42,9 @@ public class Bot {
 
         //remove any non-alphabet/space characters
         input = input.replaceAll("[^A-Za-z0-9 ]", "");
+        input = input.toLowerCase();
         //split input into separate words
         String[] in = input.split(" ");
-
-//        System.out.println(input);
 
         //find best match for response
         bestMatch = -1;
@@ -55,12 +54,15 @@ public class Bot {
             int pos = 0;
             //goes through list of input words
             for (int y = 0; y < in.length; y++) {
+                //if remaining input words is less than positions to match, break out of loop
+                if (in.length - y < keyAns[x].length - pos)
+                    break;
                 //split all words with a backslash (/) and compare each split word individually
                 String[] keys = keyAns[x][pos].split("//");
                 for (int i = 0; i < keys.length; i++) {
-                    //if there is a match, the position increments, and once all
-                    //words from keywords are matched it is the best match
-                    if (in[y].toLowerCase().equals((keys[i]).toLowerCase())) {
+                    //if there is a match or a matched synonym, the position increments, and once all
+                    //words from keywords are matched, it is the best match
+                    if (in[y].equals(keys[i]) || checkSynonym(in[y], keys[i])) {
                         pos++;
                         //if all keywords are matched
                         if (pos >= keyAns[x].length - 1 && matchCount < pos) {
@@ -108,5 +110,19 @@ public class Bot {
 
     public String getName() {
         return name;
+    }
+
+    public boolean checkSynonym(String word1, String word2) {
+        //get POS of word1
+        String[] pos = wordnet.getPos(word1);
+        for (int x = 0; x < pos.length; x++) {
+            //check through all synonyms of word1 to see if word2 is a match
+            String[] result = wordnet.getSynset(word1, pos[x]);
+            for (int y = 0; y < result.length; y++) {
+                if (result[y].equals(word2))
+                    return true;
+            }
+        }
+        return false;
     }
 }

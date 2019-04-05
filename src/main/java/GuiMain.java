@@ -54,6 +54,9 @@ public class GuiMain extends Application {
         VBox cont = new VBox();
         cont.setSpacing(10);
 
+        //test
+        sandra.checkSynonym();
+
         //sandra saying hello
         String botName = sandra.getName();
         String botIntro = botName + ": Hi! My name is " + botName + ".";

@@ -21,5 +21,6 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="com.mashape.unirest:unirest-java:1.4.9" level="project" />
     <orderEntry type="library" name="org.languagetool:language-en:2.4" level="project" />
+    <orderEntry type="library" name="rita" level="project" />
   </component>
 </module>
