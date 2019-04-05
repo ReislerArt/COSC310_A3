@@ -11,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -54,9 +56,6 @@ public class GuiMain extends Application {
         VBox cont = new VBox();
         cont.setSpacing(10);
 
-        //test
-        sandra.checkSynonym();
-
         //sandra saying hello
         String botName = sandra.getName();
         String botIntro = botName + ": Hi! My name is " + botName + ".";
@@ -64,11 +63,16 @@ public class GuiMain extends Application {
 
         //action event button for sending message
         Button button = (Button) scene.lookup("#btn");
+        button.setDefaultButton(true);
+
+        sandra.checkSynonym("weather", "atmosphere");
+
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
                 // create a label
                 String userInput = text.getText();
+                text.setText("");
                 outputMsg("Me: " + userInput, userCol, cont, scene);
 
                 //get bot response

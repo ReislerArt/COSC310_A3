@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99bf71fb-9bb1-41dd-98c8-88f47e8cc362" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rita.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/FxGui$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/FxGui.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Bot.class" afterPath="$PROJECT_DIR$/bin/Bot.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/GuiMain$1.class" afterPath="$PROJECT_DIR$/bin/GuiMain$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/GuiMain.class" afterPath="$PROJECT_DIR$/bin/GuiMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/COSC-310-Assignment-2.iml" afterPath="$PROJECT_DIR$/COSC-310-Assignment-2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Bot.java" afterPath="$PROJECT_DIR$/src/main/java/Bot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GuiMain.java" afterPath="$PROJECT_DIR$/src/main/java/GuiMain.java" />
     </list>
@@ -32,40 +30,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Bot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+            <state relative-caret-position="480">
+              <caret line="118" column="60" lean-forward="false" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#Bot#0;class#Bot#0" expanded="false" />
                 <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+                <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
                 <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
                 <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+                <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuiMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GuiMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GuiMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="1000">
+              <caret line="67" column="53" lean-forward="false" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
               <folding>
                 <element signature="method#outputMsg#0;class#GuiMain#0" expanded="false" />
                 <element signature="method#initializeBot#0;class#GuiMain#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpellCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SpellCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="46" column="61" lean-forward="false" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -97,8 +88,8 @@
         <option value="$PROJECT_DIR$/src/main/java/GUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/fxml.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/FxGui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GuiMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/Bot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuiMain.java" />
       </list>
     </option>
   </component>
@@ -636,12 +627,12 @@
       <workItem from="1551313049494" duration="93000" />
       <workItem from="1554424713312" duration="116000" />
       <workItem from="1554424960551" duration="501000" />
-      <workItem from="1554426158820" duration="23851000" />
+      <workItem from="1554426158820" duration="29350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43273000" />
+    <option name="totallyTimeSpent" value="48772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -707,10 +698,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -758,10 +752,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,10 +806,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -860,10 +860,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -911,10 +914,13 @@
         <state relative-caret-position="940">
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,10 +968,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1013,10 +1022,13 @@
         <state relative-caret-position="740">
           <caret line="39" column="95" lean-forward="false" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1050,10 +1062,13 @@
         <state relative-caret-position="1040">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,10 +1102,13 @@
         <state relative-caret-position="1040">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Bot#0;class#Bot#0" expanded="false" />
             <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
             <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
             <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1166,26 +1184,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GuiMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="480">
+          <caret line="118" column="60" lean-forward="false" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
           <folding>
-            <element signature="method#outputMsg#0;class#GuiMain#0" expanded="false" />
-            <element signature="method#initializeBot#0;class#GuiMain#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#Bot#0;class#Bot#0" expanded="false" />
+            <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
+            <element signature="method#getResponse#0;class#Bot#0" expanded="false" />
+            <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
+            <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#checkSynonym#0;class#Bot#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GuiMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        <state relative-caret-position="1000">
+          <caret line="67" column="53" lean-forward="false" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
           <folding>
-            <element signature="method#Bot#0;class#Bot#0" expanded="false" />
-            <element signature="method#createResponseList#0;class#Bot#0" expanded="false" />
-            <element signature="method#getSpecial#0;class#Bot#0" expanded="false" />
-            <element signature="method#getWeather#0;class#Bot#0" expanded="false" />
+            <element signature="method#outputMsg#0;class#GuiMain#0" expanded="false" />
+            <element signature="method#initializeBot#0;class#GuiMain#0" expanded="false" />
           </folding>
         </state>
       </provider>

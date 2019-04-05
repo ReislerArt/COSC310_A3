@@ -1,5 +1,7 @@
 import rita.RiWordNet;
 
+import java.util.Arrays;
+
 public class Bot {
     String name;
     String[][] keyAns;
@@ -21,7 +23,7 @@ public class Bot {
         keyAns = list;
         for (int x = 0; x < keyAns.length; x++) {
             for (int y = 0; y < keyAns[x].length - 1; y++) {
-                keyAns[x][y] = keyAns[x][y].replaceAll("[^A-Za-z0-9 ]", "");
+                keyAns[x][y] = keyAns[x][y].replaceAll("[^A-Za-z0-9/ ]", "");
             }
         }
     }
@@ -55,14 +57,14 @@ public class Bot {
             //goes through list of input words
             for (int y = 0; y < in.length; y++) {
                 //if remaining input words is less than positions to match, break out of loop
-                if (in.length - y < keyAns[x].length - pos)
+                if (in.length - y < keyAns[x].length - pos - 1)
                     break;
                 //split all words with a backslash (/) and compare each split word individually
                 String[] keys = keyAns[x][pos].split("//");
                 for (int i = 0; i < keys.length; i++) {
                     //if there is a match or a matched synonym, the position increments, and once all
                     //words from keywords are matched, it is the best match
-                    if (in[y].equals(keys[i]) || checkSynonym(in[y], keys[i])) {
+                    if (in[y].equals(keys[i].toLowerCase()) || checkSynonym(keys[i].toLowerCase(), in[y])) {
                         pos++;
                         //if all keywords are matched
                         if (pos >= keyAns[x].length - 1 && matchCount < pos) {
@@ -82,8 +84,10 @@ public class Bot {
             botResp = sp;
         } else if (bestMatch != -1) {
             botResp = keyAns[bestMatch][keyAns[bestMatch].length - 1];
+        } else if (in.length <= 1){
+            botResp = "Ok";
         } else {
-            botResp = "Sorry, I could not understand what you are saying.";
+            botResp = "Sorry, I could not understand what you're saying.";
         }
 
         return botResp;
@@ -115,9 +119,11 @@ public class Bot {
     public boolean checkSynonym(String word1, String word2) {
         //get POS of word1
         String[] pos = wordnet.getPos(word1);
+        System.out.println(Arrays.asList(pos));
         for (int x = 0; x < pos.length; x++) {
             //check through all synonyms of word1 to see if word2 is a match
             String[] result = wordnet.getSynset(word1, pos[x]);
+            System.out.println(Arrays.asList(result));
             for (int y = 0; y < result.length; y++) {
                 if (result[y].equals(word2))
                     return true;
