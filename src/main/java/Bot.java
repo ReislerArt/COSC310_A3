@@ -40,42 +40,53 @@ public class Bot {
             spell.setNewSentence(input);
         } catch (Exception e) {
         }
-        input = spell.getCorrectedSentence();
+        String corrected = spell.getCorrectedSentence();
+        corrected = corrected.toLowerCase();
+        corrected = corrected.replaceAll("[^A-Za-z0-9 ]", "");
 
         //remove any non-alphabet/space characters
         input = input.replaceAll("[^A-Za-z0-9 ]", "");
         input = input.toLowerCase();
-        //split input into separate words
-        String[] in = input.split(" ");
 
-        //find best match for response
-        bestMatch = -1;
-        int matchCount = 0;
-        //first loop goes through list of sentences to match
-        for (int x = 0; x < keyAns.length; x++) {
-            int pos = 0;
-            //goes through list of input words
-            for (int y = 0; y < in.length; y++) {
-                //if remaining input words is less than positions to match, break out of loop
-                if (in.length - y < keyAns[x].length - pos - 1)
-                    break;
-                //split all words with a backslash (/) and compare each split word individually
-                String[] keys = keyAns[x][pos].split("//");
-                for (int i = 0; i < keys.length; i++) {
-                    //if there is a match or a matched synonym, the position increments, and once all
-                    //words from keywords are matched, it is the best match
-                    if (in[y].equals(keys[i].toLowerCase()) || checkSynonym(keys[i].toLowerCase(), in[y])) {
-                        pos++;
-                        //if all keywords are matched
-                        if (pos >= keyAns[x].length - 1 && matchCount < pos) {
-                            matchCount = pos;
-                            bestMatch = x;
-                            y = in.length;
+        //this for loop checks once without modified sentence and if no match is found
+        // it check with 'corrected' sentence
+        //Note: This is to prevent actual words from being 'corrected' (which were already correct)
+        String[] in = null;
+        for (int temp = 0; bestMatch==-1 && temp< 1; temp++) {
+            //split input into separate words
+            in = input.split(" ");
+            //find best match for response
+            bestMatch = -1;
+            int matchCount = 0;
+            //first loop goes through list of sentences to match
+            for (int x = 0; x < keyAns.length; x++) {
+                int pos = 0;
+                //goes through list of input words
+                for (int y = 0; y < in.length; y++) {
+                    //if remaining input words is less than positions to match, break out of loop
+                    if (in.length - y < keyAns[x].length - pos - 1)
+                        break;
+                    //split all words with a backslash (/) and compare each split word individually
+                    String[] keys = keyAns[x][pos].split("//");
+                    for (int i = 0; i < keys.length; i++) {
+                        //if there is a match or a matched synonym, the position increments, and once all
+                        //words from keywords are matched, it is the best match
+                        if (in[y].equals(keys[i].toLowerCase()) || checkSynonym(keys[i].toLowerCase(), in[y])) {
+                            pos++;
+                            //if all keywords are matched
+                            if (pos >= keyAns[x].length - 1 && matchCount < pos) {
+                                i = keys.length;
+                                matchCount = pos;
+                                bestMatch = x;
+                                y = in.length;
+                            }
                         }
                     }
                 }
-            }
-        } //end of loops
+            } //end of loops
+            //if bestmatch is still -1, try to search for input with a spelling mistakes corrected
+            input = corrected;
+        }
         //check if there is a special case for these keywords
         String sp = this.getSpecial(bestMatch, in);
         String botResp = "";
@@ -84,12 +95,27 @@ public class Bot {
             botResp = sp;
         } else if (bestMatch != -1) {
             botResp = keyAns[bestMatch][keyAns[bestMatch].length - 1];
-        } else if (in.length <= 1){
+        } else if (in.length <= 1) {
             botResp = "Ok";
         } else {
-            botResp = "Sorry, I could not understand what you're saying.";
+            int rand = (int) Math.ceil(Math.random() * 5);
+            switch (rand){
+                case 1:
+                    botResp = "That is a question for another day (but not today, because I have no answer for it).";
+                    break;
+                case 2:
+                    botResp = "Hmm... Yes, an excellent question. I believe to fully answer this question we need to dig deeper and understand the underlying details behind it before we can answer this.";
+                    break;
+                case 3:
+                    botResp = "I not understand, I canne speak english knot very good.";
+                    break;
+                case 4:
+                    botResp = "Sorry, while trying to figure out your question I ran out of readable memory space allocation oil.";
+                    break;
+                case 5:
+                    botResp = "Has anyone ever told you you ask a lot of random unnecessary questions?";
+            }
         }
-
         return botResp;
     }
 
@@ -119,11 +145,9 @@ public class Bot {
     public boolean checkSynonym(String word1, String word2) {
         //get POS of word1
         String[] pos = wordnet.getPos(word1);
-        System.out.println(Arrays.asList(pos));
         for (int x = 0; x < pos.length; x++) {
             //check through all synonyms of word1 to see if word2 is a match
             String[] result = wordnet.getSynset(word1, pos[x]);
-            System.out.println(Arrays.asList(result));
             for (int y = 0; y < result.length; y++) {
                 if (result[y].equals(word2))
                     return true;
