@@ -141,20 +141,21 @@ public class GuiMain extends Application {
                 {"Your", "turn", "May the force be with you"},
                 {"Ah", "see", "you're", "not", "that", "smart", "Sorry, I could not... Hehehe just kiddig I got that."},
                 {"How", "are", "you", "good thanks"},
+                {"thanks//thx//thank", "No problem!"},
                 //Topic 2 - Rock Climbing and Hiking
                 {"are//is//know", "good", "hikes//hike","Some good hikes might be Christie Falls, Bear Creek, Myra Canyon, and Fintry Falls"},
                 {"about", "christie", "You'll likely need an AWD car to get to Christie Falls. To get to the bottom of the falls there's a fairly hard trail to the bottom and it has a swing that swings into the waterfall."},
                 {"about", "bear", "Bear Creek is very easy to get to with a parking lot or parking on the side of the road and has dedicated trails and a nice waterfall."},
                 {"about", "myra", "Myra Canyon has a long stretch of bumpy gravel road to drive through but is otherwise easy to get to. The trail is very easy and flat and can even be biked on. It passes through 2 abandoned train tunnels."},
                 {"about", "fintry", "Fintry Falls has lots of stairs that need to be climbed but with several nice waterfalls. It is very easy to access by car."},
-                {"are//is//know","places//place","climb", "To go bouldering you can check out the boulder fields and for top roping or sport climbing you can try Skaha"},
+                {"are//is//know","places//place","climb//climbing", "To go bouldering you can check out the boulder fields and for top roping or sport climbing you can try Skaha"},
                 {"about", "boulder","fields", "The boulder fields has a large selection of bouldering problems. My information is limited on the accessibility."},
                 {"about", "skaha", "Skaha has a large selection of top roping and sport climbing problems. My information is limited on the accessibility."},
                 {"what", "need", "climb//climbing", "If you go bouldering, all you need is a crashmat, rock climbing shoes, and chalk. To go sport climbing or top roping you'd need a long dynamic rope, a harness, rock climbing shoes, chalk, some carabiners, a belay device, a partner, and possibly some other equipment."},
                 {"what","think//opinion", "climbing", "I think climbing is a great sport if done safely for strength, meeting people, and exploring nature and new places."},
                 {"is", "climbing","dangerous", "Rock Climbing can be dangerous if done improperly, but generally, if done correctly, it is very safe."},
                 {"is","climbing","expensive", "Getting into rock climbing can be quite affordable (bouldering), but can also get very expensive (ice climbing)."},
-                {"climbing","gym/gyms","Yes. There is a Gneiss, a bouldering gym and The Crux, a bouldering and top roping gym. Both are located in Kelowna."},
+                {"climbing","gym//gyms","Yes. There is Gneiss, a bouldering gym, and The Crux, a bouldering and top roping gym. Both are located in Kelowna."},
                 {"climbing", "store//shop//stores//shops", "There is one climbing store in Kelowna called Mec."}
         };
         // in this 2D array, we are storing the keywords and the answer they match to.
