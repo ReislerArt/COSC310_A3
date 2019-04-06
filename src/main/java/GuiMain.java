@@ -74,10 +74,12 @@ public class GuiMain extends Application {
                 String userInput = text.getText();
                 text.setText("");
                 outputMsg("Me: " + userInput, userCol, cont, scene);
+                System.out.println("Me: " + userInput);
 
                 //get bot response
                 String botResp = sandra.getResponse(userInput);
                 outputMsg(botName + ": " + botResp, botCol, cont, scene);
+                System.out.println(botName + ": " + botResp);
             }
         });
     }
@@ -108,7 +110,7 @@ public class GuiMain extends Application {
         String[][] keywordsandAswers = {
                 //Extra - Weather
                 {"how//what", "is", "weather", sandra.getWeather("Kelowna")},
-                {"how", "is", "weather", "in", "[city/place]"}, //key=1, special
+                {"how//what", "is", "weather", "in", "[city/place]"}, //key=1, special
                 //Topic 1 - Casual conversation
                 {"how", "is", "food", "I'm a robot, I don't eat food!"},
                 {"where", "do", "you", "live", "On your hard drive"},

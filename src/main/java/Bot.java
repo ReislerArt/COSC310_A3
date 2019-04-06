@@ -52,11 +52,11 @@ public class Bot {
         // it check with 'corrected' sentence
         //Note: This is to prevent actual words from being 'corrected' (which were already correct)
         String[] in = null;
-        for (int temp = 0; bestMatch==-1 && temp< 1; temp++) {
+        bestMatch = -1;
+        for (int temp = 0; bestMatch==-1 && temp<= 1; temp++) {
             //split input into separate words
             in = input.split(" ");
             //find best match for response
-            bestMatch = -1;
             int matchCount = 0;
             //first loop goes through list of sentences to match
             for (int x = 0; x < keyAns.length; x++) {
